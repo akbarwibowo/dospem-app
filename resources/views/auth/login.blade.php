@@ -62,6 +62,14 @@
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+
+                                <br><br>
+                                <b>Or login using account</b>
+                                <br>
+                                <br>
+                                <a href="{{ url('auth/google') }}" class="ml-1 btn-primary btn-sm" style="margin-top:0px !important; background:rgb(243, 5, 5); color:white; padding:5px; border-radius:7px" id="btn-login">
+                                    <i class="fab fa-google" aria-hidden="true"></i>&nbsp;Google
+                                </a>
                             </div>
                         </div>
                     </form>
