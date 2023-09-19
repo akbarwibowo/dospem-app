@@ -31,4 +31,22 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'google' => [
+        'client_id' => '730888218076-qq1h6qmkvt08pk99k7vf2icdhmalmn8f.apps.googleusercontent.com',
+        'client_secret' => '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',
+        'redirect' => 'http://127.0.0.1:8000/auth/google/callback',
+    ],
+
+    'twitter' => [
+        'client_id' => 'zTE4BNLzxnNRCq5X70vdWVoro',
+        'client_secret' => 'u34WrYhhWOv6uqVCXq42SEMQ6jalcC9la3dzxxubpgiraDAFHk',
+        'redirect' => 'http://www.localhost:8000/auth/twitter/callback',
+    ],
+
+    // 'facebook' => [
+    //     'client_id' => '1355557468384525',
+    //     'client_secret' => 'c8acfafd7d1ace103e5b137bbf4433c1',
+    //     'redirect' => 'http://localhost:8000/auth/facebook/callback',
+    // ],
+
 ];
