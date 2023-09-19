@@ -40,12 +40,13 @@ return [
     'twitter' => [
         'client_id' => 'zTE4BNLzxnNRCq5X70vdWVoro',
         'client_secret' => 'u34WrYhhWOv6uqVCXq42SEMQ6jalcC9la3dzxxubpgiraDAFHk',
-        // 'API_key' => 'Vfb0GbSJzdohzgZsDXXdfpQFE',
-        // 'API_secret' => 'c7VdbjzGcHgu4NPMNvI78gmTZWDFMXUOWYDwTjHJtu3UcsEn62',
-        // 'bearer_token' => 'AAAAAAAAAAAAAAAAAAAAAC%2BLpwEAAAAAdGEq%2F9F2PboR7x1HhLMla2SB3AU%3D0OUSDLo9serIS5riZxuPJ2BqEE8LqtCmJt18vjBm5biaRjrwzh',
-        // 'access_token' => '1429650514975739905-hmcetZ3ZV2D0xPKtrRAaMzAqniShlD',
-        // 'access_secret' => 'xhwq2jW3sYyG3iLobyfqnqSGBwamV6OJTWoEzI3X0TamY',
-        'redirect' => 'http://www.localhost:8000/auth/twitter/callback'
+        'redirect' => 'http://www.localhost:8000/auth/twitter/callback',
     ],
+
+    // 'facebook' => [
+    //     'client_id' => '1355557468384525',
+    //     'client_secret' => 'c8acfafd7d1ace103e5b137bbf4433c1',
+    //     'redirect' => 'http://localhost:8000/auth/facebook/callback',
+    // ],
 
 ];

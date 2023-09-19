@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\TwitterController;
+use App\Http\Controllers\FacebookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,5 +32,6 @@ Route::get('auth/twitter', [TwitterController::class, 'redirectToTwitter']);
 
 Route::get('auth/twitter/callback', [TwitterController::class, 'handleTwitterCallback']);
 
+Route::get('auth/facebook', [FacebookController::class, 'redirectToFacebook']);
 
-
+Route::get('auth/facebook/callback', [FacebookController::class, 'handleFacebookCallback']);
