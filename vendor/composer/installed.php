@@ -221,6 +221,7 @@
             'dev_requirement' => false,
             'replaced' => array(
                 0 => 'v10.25.1',
+
             ),
         ),
         'illuminate/database' => array(
@@ -304,7 +305,7 @@
         'illuminate/queue' => array(
             'dev_requirement' => false,
             'replaced' => array(
-                0 => 'v10.25.1',
+                0 => 'v10.25.1'
             ),
         ),
         'illuminate/redis' => array(

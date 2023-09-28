@@ -1201,6 +1201,7 @@
         },
         {
             "name": "laravel/framework",
+
             "version": "v10.25.1",
             "version_normalized": "10.25.1.0",
             "source": {
@@ -1355,7 +1356,7 @@
                 "symfony/mailgun-mailer": "Required to enable support for the Mailgun mail transport (^6.2).",
                 "symfony/postmark-mailer": "Required to enable support for the Postmark mail transport (^6.2).",
                 "symfony/psr-http-message-bridge": "Required to use PSR-7 bridging features (^2.0)."
-            },
+
             "time": "2023-09-27T01:29:32+00:00",
             "type": "library",
             "extra": {
