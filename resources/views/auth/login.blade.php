@@ -64,15 +64,16 @@
                                 @endif
 
                                 <br><br>
-                                <b>Or login using account</b>
+                                <b>Login With :</b>
                                 <br>
                                 <br>
-                                <a href="{{ url('auth/google') }}" class="ml-1 btn btn-primary btn-sm" style="margin-top:0px !important; background:rgb(243, 5, 5); color:white; padding:5px; border-radius:7px" id="btn-glogin">
-                                    <i class="fab fa-google" aria-hidden="true"></i>&nbsp;Google
+                                <div class="d-grid gap-2 d-md-block">
+                                     <a href="{{ url('auth/google') }}" class="btn " style="margin-top:0px !important; background:rgb(243, 5, 5); color:white; padding:5px;" id="btn-glogin">
+                                    <i class="fa fa-google" aria-hidden="true"></i>&nbsp;Login with Google
                                 </a>
-                                <a href="{{ url('auth/twitter') }}" class="ml-1 btn btn-primary btn-sm" style="margin: 0px !important;background:rgb(29, 161, 242); color:white;padding:5px;border-radius:7px" id="btn-twtlogin">
-                                    <i class="fab fa-twitter" aria-hidden="true"></i>&nbsp;Twitter
-                                </a>
+                                <a href="{{ url('auth/twitter') }}" class="btn" style="margin: 0px !important;background:rgb(29, 161, 242); color:white;padding:5px;" id="btn-twtlogin">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>&nbsp;login with Twitter</a>
+                                </div>
                             </div>
                         </div>
                     </form>
