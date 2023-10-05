@@ -20,9 +20,6 @@ use App\Http\Controllers\Auth\VerificationController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/', function(){
-    return view('welcome');
-});
 
 Auth::routes();
 

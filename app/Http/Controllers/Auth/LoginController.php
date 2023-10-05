@@ -57,13 +57,14 @@ public function store(Request $request) {
     $request->validate([
         'name' => 'required|string|max:250',
         'email' => 'required|string|email:rfc,dns|max:250|unique:users',
+        // 'nim' => 'required|string|min:11|unique:users',
         'password' => 'required|string|min:8|confirmed'
         ]);
-    
     
     $user = User::create([
         'name' => $request->name,
         'email' => $request->email,
+        'nim' => $request->nim,
         'password' => Hash::make($request->password)
         ]);
 
