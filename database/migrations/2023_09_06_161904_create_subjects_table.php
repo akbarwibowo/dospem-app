@@ -16,6 +16,7 @@ return new class extends Migration
             $table->smallInteger('semester');
             $table->string('subject', 255);
             $table->string('major', 200);
+            $table->string('concentration',255);
         });
     }
 
