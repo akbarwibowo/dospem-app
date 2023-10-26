@@ -1,0 +1,79 @@
+:root {
+    --pr-color: #B6BAC8; 
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+}
+.navbar {
+    z-index: 3;
+}
+* {
+    z-index: 2;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.nav-link {
+    font-size: 16px;
+}
+
+.nav-link.active {
+    font-weight: 700;
+}
+
+.button-secondary {
+    width: 100px;
+    height: 37px;
+    background-color: #5F17F7;
+    color: #fff ;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 7px;
+    border-radius: 10px;
+}
+
+.button-primary {
+    width: 133px;
+    height: 40px;
+    background-color: transparent;
+    color: #000;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#hero {
+    background: linear-gradient(155deg, #fff, var(--pr-color));
+    height: 100vh;
+    width: 100%;
+}
+
+.hero-tagline h1 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 70px;
+    margin-bottom: 30px;
+
+}
+
+.hero-tagline h3 {
+    font-size: 16px;
+    color:  #5F17F7;
+    line-height: 30px;
+    width: 85%;
+}
+
+.button-lg-primary {
+    width: 180px;
+    height: 50px;
+    background-color: #5F17F7;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+}
