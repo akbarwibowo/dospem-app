@@ -15,6 +15,9 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                    <button class="btn btn-primary">
+                        <a href="/newquestion">form</a>
+                    </button>
                 </div>
             </div>
         </div>
