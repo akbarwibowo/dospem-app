@@ -77,3 +77,9 @@ body {
     font-weight: 700;
     border-radius: 10px;
 }
+
+
+/* new question style*/
+.radioForm {
+    margin-bottom: 20px; /* Atur jarak (misalnya, 20px) sesuai kebutuhan Anda */
+}

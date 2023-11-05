@@ -68,7 +68,7 @@
                                 <br>
                                 <br>
                                 <div class="d-grid gap-2 d-md-block">
-                                     <a href="{{ url('auth/google') }}" class="btn " style="margin-top:0px !important; background:rgb(243, 5, 5); color:white; padding:5px;" id="btn-glogin">
+                                    <a href="{{ url('auth/google') }}" class="btn " style="margin-top:0px !important; background:rgb(243, 5, 5); color:white; padding:5px;" id="btn-glogin">
                                     <i class="fa fa-google" aria-hidden="true"></i>&nbsp;Login with Google
                                 </a>
                                 <a href="{{ url('auth/twitter') }}" class="btn" style="margin: 0px !important;background:rgb(29, 161, 242); color:white;padding:5px;" id="btn-twtlogin">

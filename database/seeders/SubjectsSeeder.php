@@ -60,7 +60,7 @@ class SubjectsSeeder extends Seeder
                 // 'id' => 'A6',
                 'semester' => '4',
                 'subject' => 'Praktik Desain Komunikasi Visual',
-                'major' => 'Teknologi InformasiTeknologi Informasi',
+                'major' => 'Teknologi Informasi',
                 'concentration' => 'Multimedia',
             ],
 

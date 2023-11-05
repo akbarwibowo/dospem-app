@@ -39,7 +39,10 @@
         </li>
       </ul>
       <div> 
-        <button class="button-primary">Login</button>
+        <form action="{{ route('logout') }}" id="logout-form" method="POST">
+            @csrf
+            <button class="button-primary">Login</button>
+        </form>
         <button class="button-secondary">Sign Up</button>
       </div>
     </div>

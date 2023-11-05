@@ -1,35 +1,36 @@
+@extends('layouts.app')
 
+@section('content')
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Dynamically Add/Remove Radio Inputs with Text</title>
-    <style>
-        .radioForm {
-            margin-bottom: 20px; /* Atur jarak (misalnya, 20px) sesuai kebutuhan Anda */
-        }
-    </style>
+    <title>Menambahkan Pertanyaan</title>
+    <link rel="stylesheet" href={!! asset('css/style.css') !!}>
 </head>
 <body>
-    <button type="button" id="addQuestionButton">Tambah Pertanyaan</button>
+    <button type="button" id="addQuestionButton">{{ _('Tambah Pertanyaan') }}</button>
 
     <div id="formsContainer">
-        <form class="radioForm">
-            <label for="questionText">Pertanyaan:</label><br>
-            <input type="text" id="questionText" name="text">
-            <button type="button" class="remove-question">Hapus Pertanyaan</button><br>
-
-            <label for="options">Pilihan:</label>
-            <div class="options">
-                <div class="option">
-                    <label for="radioOption0">Opsi 1:</label>
-                    <input type="radio" id="radioOption0" name="radioOptions0" value="">
-                    <input type="text" name="textOptions" value="">
-                    <button type="button" class="remove-option">Hapus</button>
-                </div>
-            </div>
-
-            <button type="button" class="addOptionButton">Tambah Pilihan</button><br>
-            <input type="submit" value="Submit">
+        <form class="radioForm" action="{{ route('add') }}" method="POST">
+            @csrf
+            {{-- <div class="radioForm"> --}}
+                <label for="questionText">{{ _('Pertanyaan') }}</label><br>
+                <input type="text" id="questionText" name="question">
+                <button type="button" class="remove-question">{{ ('Hapus Pertanyaan') }}</button><br>
+    
+                {{-- <label for="options">Pilihan:</label>
+                <div class="options">
+                    <div class="option">
+                        <label for="radioOption0">Opsi 1:</label>
+                        <input type="radio" id="radioOption0" name="radioOptions0" value="">
+                        <input type="text" name="textOptions" value="">
+                        <button type="button" class="remove-option">Hapus</button>
+                    </div>
+                </div> --}}
+    
+                {{-- <button type="button" class="addOptionButton">Tambah Pilihan</button><br> --}}
+            {{-- </div> --}}
+            <button type="submit">{{ _('Add') }}</button>
         </form>
     </div>
 
@@ -44,24 +45,24 @@
                 const newForm = document.querySelector('.radioForm').cloneNode(true);
                 formsContainer.appendChild(newForm);
 
-                const questionText = newForm.querySelector("#questionText");
-                const optionInputs = newForm.querySelectorAll('input[name="textOptions"]');
-                questionText.value = "";
+                // const questionText = newForm.querySelector("#questionText");
+                // const optionInputs = newForm.querySelectorAll('input[name="textOptions"]');
+                // questionText.value = "";
 
-                optionInputs.forEach((input, index) => {
-                    input.value = "";
-                    input.name = `textOptions${index}`;
-                });
+                // optionInputs.forEach((input, index) => {
+                //     input.value = "";
+                //     input.name = `textOptions${index}`;
+                // });
 
-                const removeButtons = newForm.querySelectorAll(".remove-option");
-                removeButtons.forEach((removeButton) => {
-                    removeButton.addEventListener("click", () => removeOption(removeButton));
-                });
+                // const removeButtons = newForm.querySelectorAll(".remove-option");
+                // removeButtons.forEach((removeButton) => {
+                //     removeButton.addEventListener("click", () => removeOption(removeButton));
+                // });
 
-                const addOptionButtons = newForm.querySelectorAll(".addOptionButton");
-                addOptionButtons.forEach((addButton) => {
-                    addButton.addEventListener("click", () => addOption(addButton));
-                });
+                // const addOptionButtons = newForm.querySelectorAll(".addOptionButton");
+                // addOptionButtons.forEach((addButton) => {
+                //     addButton.addEventListener("click", () => addOption(addButton));
+                // });
 
                 const removeQuestionButton = newForm.querySelector(".remove-question");
                 removeQuestionButton.addEventListener("click", () => removeQuestion(newForm));
@@ -113,5 +114,7 @@
             });
         });
     </script>
+    <script src=""></script>
 </body>
 </html>
+@endsection

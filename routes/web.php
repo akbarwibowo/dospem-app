@@ -6,6 +6,10 @@ use App\Http\Controllers\TwitterController;
 use App\Http\Controllers\FacebookController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\VerificationController;
+use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\SubjectController;
+use App\Models\Subject;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,6 +32,15 @@ Route::get('/newquestion', function () {
 Auth::routes();
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::controller(QuestionController::class)->group(function() {
+    Route::get('/new', 'newQuestion')->name('newQuestion');
+    Route::post('/add', 'add')->name('add');
+    // Route::get('/added','added')->name('added');
+});
+
+Route::controller(SubjectController::class)->group(function() {
+    Route::get('/subjects', 'subjects')->name('subjects');
+});
 
 Route::controller(LoginController::class)->group(function() {
     Route::get('/register', 'register')->name('register');
