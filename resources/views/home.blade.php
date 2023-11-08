@@ -38,14 +38,20 @@
           <a class="nav-link" href="/results">Results</a>
         </li>
       </ul>
-      <div> 
-        <button class="button-primary">Login</button>
-        <button class="button-secondary">Sign Up</button>
+      <div class="dropdown"> 
+      <a href="javascript:void(0)" class="dropbtn">Profil</a>
+        <div class="dropdown-content">
+          <a href="#">Edit Profil</a>
+          <a href="#">Logout</a>
+        </div>
+        <!-- <button class="button-primary">Profil</button> -->
       </div>
     </div>
   </div>
 </nav>
-
+<li class="dropdown">
+ 
+      </li>
 <section id="hero">
   <div class="container h-100">
     <div class="row h-100">
