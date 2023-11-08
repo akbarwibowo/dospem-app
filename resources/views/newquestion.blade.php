@@ -4,8 +4,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
     <title>Menambahkan Pertanyaan</title>
     <link rel="stylesheet" href={!! asset('css/style.css') !!}>
+=======
+    <title>NewQuestion</title>
+    <style>
+        .radioForm {
+            margin-bottom: 20px; /* Atur jarak (misalnya, 20px) sesuai kebutuhan Anda */
+        }
+        table,
+        td,th {
+        border: 1px solid #333;
+        }
+
+    </style>
+>>>>>>> 9ee1d2c (question)
 </head>
 <body>
     <button type="button" id="addQuestionButton">{{ _('Tambah Pertanyaan') }}</button>
@@ -33,6 +47,32 @@
             <button type="submit">{{ _('Add') }}</button>
         </form>
     </div>
+<<<<<<< HEAD
+=======
+    <div id="">
+        <table>
+            <tr>
+              <th>No</th>
+              <th>Pertanyaan</th>
+              <th>Action</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Maria Anders</td>
+              <td>edit remove</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Francisco Chang</td>
+              <td>edit remove</td>
+            </tr>
+          </table>
+
+          remove popup alert
+            alert konfirmasi soalyang akan dihapus
+    </div>
+
+>>>>>>> 9ee1d2c (question)
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
