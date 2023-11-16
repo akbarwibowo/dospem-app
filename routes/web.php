@@ -7,6 +7,7 @@ use App\Http\Controllers\FacebookController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\VerificationController;
 use App\Http\Controllers\QuestionController;
+use App\Http\Controllers\ResultController;
 use App\Http\Controllers\SubjectController;
 use App\Models\Subject;
 
@@ -33,17 +34,21 @@ Route::get('/question', function () {
     return view('question');
 });
 
-Route::get('/form', function () {
-    return view('form');
-});
+// Route::get('/form', function () {
+//     return view('form');
+// });
 
 Auth::routes();
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::controller(ResultController::class)->group(function() {
+    Route::post('/result/{id}', 'result')->name('result');
+});
+
 Route::controller(QuestionController::class)->group(function() {
     Route::get('/new', 'newQuestion')->name('newQuestion');
     Route::post('/add', 'add')->name('add');
-    // Route::get('/added','added')->name('added');
+    Route::get('/form','getQuestions')->name('form');
 });
 
 Route::controller(SubjectController::class)->group(function() {

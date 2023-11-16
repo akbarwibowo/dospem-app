@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('result', function(Blueprint $table){
             $table->id('result_id')->autoIncrement();
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreignId('semester_id')->constrained('subjects')->onDelete('cascade')->onUpdate('cascade');
-            $table->string('result', 255);
+            $table->foreignId('user_id')->constrained(table: 'users', column:'id')->onDelete('cascade')->onUpdate('cascade');
+            $table->set('answers',[0,1]);
             $table->smallInteger('semester');
             $table->string('major', 100);
+            $table->timestamps();
         });
     }
 

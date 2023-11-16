@@ -101,7 +101,8 @@ public function logout(Request $request) {
     Auth::logout();
     $request->session()->invalidate();
     $request->session()->regenerateToken();
-    return redirect()->route('login')
-        ->withSuccess('Selamat, Anda telah berhasil melakukan Logout!');
+    // return redirect()->route('login')
+    //     ->withSuccess('Selamat, Anda telah berhasil melakukan Logout!');
+    return view("welcome");
 }
 }
