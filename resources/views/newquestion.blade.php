@@ -38,7 +38,7 @@
                 <input type="radio" id="multimedia" name="type" value="multimedia">multimedia
                 <br>
                 <button type="button" class="remove-question">{{ ('Hapus Pertanyaan') }}</button><br>
-    
+
                 {{-- <label for="options">Pilihan:</label>
                 <div class="options">
                     <div class="option">
@@ -48,7 +48,7 @@
                         <button type="button" class="remove-option">Hapus</button>
                     </div>
                 </div> --}}
-    
+
                 {{-- <button type="button" class="addOptionButton">Tambah Pilihan</button><br> --}}
             {{-- </div> --}}
             <button type="submit">{{ _('Add') }}</button>

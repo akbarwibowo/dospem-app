@@ -43,6 +43,15 @@
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="/results">Results</a>
                     </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="/userlist">User</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="/newquestion">Add Question</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="/question">Question</a>
+                    </li>
                 </ul>
                 <div class="dropdown">
                     <a href="javascript:void(0)" class="dropbtn">Profil</a>
