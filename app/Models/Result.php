@@ -14,8 +14,9 @@ class Result extends Model
 
     protected $fillable = [
         'user_id',
+        'concentration_id',
+        'question_id',
         'answers',
         'semester',
-        'major',
     ];
 }

@@ -24,18 +24,18 @@
             @csrf
             {{-- <div class="radioForm"> --}}
                 <label for="questionText">{{ _('Pertanyaan') }}</label><br>
-                <input type="text" id="questionText" name="question">
+                <input type="text" id="questionText" name="question" required>
                 <br>
                 <h5>Semester</h5>
-                <input type="radio" id="semester4" name="semester" value="4">4
-                <input type="radio" id="semester5" name="semester" value="5">5
-                <input type="radio" id="semester6" name="semester" value="6">6
+                <input type="radio" id="semester4" name="semester" value="4" required>4
+                <input type="radio" id="semester5" name="semester" value="5" required>5
+                <input type="radio" id="semester6" name="semester" value="6" required>6
                 <br>
                 <br>
                 <h5>Jenis</h5>
-                <input type="radio" id="software" name="type" value="software">rpl
-                <input type="radio" id="networking" name="type" value="networking">jaringan komputer
-                <input type="radio" id="multimedia" name="type" value="multimedia">multimedia
+                <input type="radio" id="software" name="type" value="1" required>rpl
+                <input type="radio" id="networking" name="type" value="2" required>jaringan komputer
+                <input type="radio" id="multimedia" name="type" value="3" required>multimedia
                 <br>
                 <button type="button" class="remove-question">{{ ('Hapus Pertanyaan') }}</button><br>
     

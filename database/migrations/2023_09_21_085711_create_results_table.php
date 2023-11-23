@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('result', function(Blueprint $table){
             $table->id('result_id')->autoIncrement();
             $table->foreignId('user_id')->constrained(table: 'users', column:'id')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreignId('subject_id')->constrained(table: 'subjects', column: 'id')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('concentration_id')->constrained(table: 'concentrations', column: 'id')->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('question_id')->constrained(table: 'questions', column: 'id')->onDelete('cascade')->onUpdate('cascade');
-            $table->set('answers',[0,1]);
+            $table->smallInteger('answers');
             $table->smallInteger('semester');
-            $table->string('major', 100);
+            // $table->string('major', 100);55
             $table->timestamps();
         });
     }

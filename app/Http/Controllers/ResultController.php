@@ -12,14 +12,16 @@ class ResultController extends Controller
 {
     public function result(Request $request, int $id) {
         $respons = $request->input('respons');
-        foreach($respons as $index => $response)
-        $result = Result::create([
-            'user_id' => $id,
-            'answers' => $response['jawaban'],
-            'semester' => $request->semester,
-            'major' => 'IT',
-        ]);
+        foreach($respons as $index => $response){
+                $result = Result::create([
+                    'user_id' => $id,
+                    'concentration_id'=>$response['type'],
+                    'question_id'=>$response['id'],
+                    'answers' => $response['jawaban'],
+                    'semester' => $request->semester,
+                ]);
+        }
         
-        return view('home');
+        return redirect('/home');
     }
 }
