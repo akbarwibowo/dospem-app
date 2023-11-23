@@ -34,6 +34,10 @@ Route::get('/question', function () {
     return view('question');
 });
 
+Route::get('/userlist', function () {
+    return view('user_list');
+});
+
 // Route::get('/form', function () {
 //     return view('form');
 // });
