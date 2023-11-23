@@ -21,21 +21,22 @@
 
     <div id="formsContainer">
         <form class="radioForm" action="{{ route('add') }}" method="POST">
+            @for ($i = 0; $i < 3; $i++)
             @csrf
             {{-- <div class="radioForm"> --}}
                 <label for="questionText">{{ _('Pertanyaan') }}</label><br>
-                <input type="text" id="questionText" name="question" required>
+                <input type="text" id="questionText" name="question[{{ $i }}]" required>
                 <br>
                 <h5>Semester</h5>
-                <input type="radio" id="semester4" name="semester" value="4" required>4
-                <input type="radio" id="semester5" name="semester" value="5" required>5
-                <input type="radio" id="semester6" name="semester" value="6" required>6
+                <input type="radio" id="semester4" name="semester[{{ $i }}]" value="4" required>4
+                <input type="radio" id="semester5" name="semester[{{ $i }}]" value="5" required>5
+                <input type="radio" id="semester6" name="semester[{{ $i }}]" value="6" required>6
                 <br>
                 <br>
                 <h5>Jenis</h5>
-                <input type="radio" id="software" name="type" value="1" required>rpl
-                <input type="radio" id="networking" name="type" value="2" required>jaringan komputer
-                <input type="radio" id="multimedia" name="type" value="3" required>multimedia
+                <input type="radio" id="software" name="type[{{ $i }}]" value="1" required>rpl
+                <input type="radio" id="networking" name="type[{{ $i }}]" value="2" required>jaringan komputer
+                <input type="radio" id="multimedia" name="type[{{ $i }}]" value="3" required>multimedia
                 <br>
                 <button type="button" class="remove-question">{{ ('Hapus Pertanyaan') }}</button><br>
 
@@ -51,6 +52,7 @@
 
                 {{-- <button type="button" class="addOptionButton">Tambah Pilihan</button><br> --}}
             {{-- </div> --}}
+            @endfor
             <button type="submit">{{ _('Add') }}</button>
         </form>
     </div>

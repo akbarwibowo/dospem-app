@@ -15,11 +15,16 @@ class QuestionController extends Controller
     }
 
     public function add(Request $request) {
-        $question = Question::create([
-            'question' => $request->question,
-            'semester' => $request->semester,
-            'concentration_id' => $request->type,
-        ]);
+        $semesters = $request->input('semester');
+        $con_id = $request->input('type');
+        $questions = $request->input('question');
+        foreach($questions as $index => $question){
+            $question = Question::create([
+                'question' => $question,
+                'semester' => $semesters[$index],
+                'concentration_id' => $con_id[$index],
+            ]);
+        }
 
         return view('home');
     }
