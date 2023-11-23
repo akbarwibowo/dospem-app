@@ -125,3 +125,94 @@ li.dropdown{
     display: block;
 }
 
+form .radioForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0 12px 0;
+}
+
+form .radioForm input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+
+.formsContainer{
+    width: 700px;
+    height: 500px;
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 05px 10px rgba(0, 0, 0, 0, 0.15);
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    margin-left: 250px;
+    margin-right: 200px;
+}
+
+h5{
+    font-size: 13px;
+    margin-top: 20px;
+    font-family: 'Poppins';
+}
+
+input[type=text] {
+    width: 100%;
+    height: 80px;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+input[type=radio] {
+    width: 2em;
+    font-size: 1em;
+    display: inline-block;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+    background-color: #5F17F7;
+    border-color: #f1f1f1;
+}
+
+label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 12px 0;
+    cursor: pointer;
+    position: relative;
+  }
+
+form button {
+    height: 40px;
+    width: 140px;
+    margin-left: 250px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #5F17F7
+
+}
+
+form button input:hover{
+    background: #5F17F7;
+}

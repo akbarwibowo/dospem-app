@@ -4,22 +4,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>NewQuestion</title>
     <style>
-        .radioForm {
-            margin-bottom: 20px; /* Atur jarak (misalnya, 20px) sesuai kebutuhan Anda */
-        }
-        table,
-        td,th {
-        border: 1px solid #333;
-        }
-
+        <link rel="stylesheet" type="text/css" href="{!! asset('css/style.css') !!}">
     </style>
+    <title>NewQuestion</title>
 </head>
 <body>
     {{-- <button type="button" id="addQuestionButton">{{ _('Tambah Pertanyaan') }}</button> --}}
 
-    <div id="formsContainer">
+    <div class="formsContainer">
         <form class="radioForm" action="{{ route('add') }}" method="POST">
             @csrf
             {{-- <div class="radioForm"> --}}
@@ -33,9 +26,9 @@
                 <br>
                 <br>
                 <h5>Jenis</h5>
-                <input type="radio" id="software" name="type" value="software">rpl
-                <input type="radio" id="networking" name="type" value="networking">jaringan komputer
-                <input type="radio" id="multimedia" name="type" value="multimedia">multimedia
+                <input type="radio" id="software" name="type" value="software">RPL<br>
+                <input type="radio" id="networking" name="type" value="networking">Jaringan Komputer<br>
+                <input type="radio" id="multimedia" name="type" value="multimedia">Multimedia
                 <br>
                 <button type="button" class="remove-question">{{ ('Hapus Pertanyaan') }}</button><br>
     
