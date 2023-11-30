@@ -25,8 +25,8 @@
                                 <div class="card-header">
                                     <strong style="margin-right: 5px">{{ $index + 1 }}.</strong>
                                     <b>{{ $question->question }}</b>
-                                    {{-- <b>{{ $id[$index]->id }}</b> --}}
-                                    {{-- <b>{{ $type[$index]->concentration_id }}</b> --}}
+                                    {{-- <b>{{ $id[$index]->id }}</b>
+                                    <b>{{ $type[$index]->concentration_id }}</b> --}}
                                     
                                 </div>
                                 <div class="card-body">

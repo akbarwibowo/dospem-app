@@ -56,8 +56,11 @@
                 <div class="dropdown">
                     <a href="javascript:void(0)" class="dropbtn">Profil</a>
                     <div class="dropdown-content">
-                        <a href="#">Edit Profil</a>
-                        {{-- <a method="POST" href="{{ route('logout') }}">Logout</a> --}}
+                        @php
+                            $user_id = Auth::user()->id;
+                        @endphp
+                        <a href="/profile/{{ $user_id }}">Edit Profil</a>
+
                         <a class="dropdown-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                                 document.getElementById('logout-form').submit();">
@@ -83,7 +86,7 @@
                     <h3> Hello, welcome! </h3>
                     <h1>Find subjects according to your passions.</h1>
                     <a href="/form">
-                      <button class="button-lg-primary">Find subjects</button>
+                        <button class="button-lg-primary">Find subjects</button>
                     </a>
                 </div>
             </div>

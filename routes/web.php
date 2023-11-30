@@ -6,6 +6,7 @@ use App\Http\Controllers\TwitterController;
 use App\Http\Controllers\FacebookController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\VerificationController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\ResultController;
 use App\Http\Controllers\SubjectController;
@@ -45,6 +46,10 @@ Route::get('/userlist', function () {
 Auth::routes();
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::controller(ProfileController::class)->group(function(){
+    route::get('/profile/{id}', 'profile')->name('profile');
+});
+
 Route::controller(ResultController::class)->group(function() {
     Route::post('/result/{id}', 'result')->name('result');
 });
