@@ -1,33 +1,88 @@
-{{-- @extends('layouts.app') --}}
-@extends('layouts.nav')
-@section('content')
-<div>
-    <!-- It is quality rather than quantity that matters. - Lucius Annaeus Seneca -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+        href="{{ asset('https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css') }}"
+        integrity="sha384-nU14brUcp6StFntEOOEBvcJm4huWjB0OcIeQ3fltAfSmuZFrkAif0T+UtNGlKKQv" crossorigin="anonymous">
+
+    <!--Font Google -->
+    <link rel="preconnect" href="{{ asset('https://fonts.googleapis.com') }}">
+    <link rel="preconnect" href="{{ asset('https://fonts.gstatic.com') }}" crossorigin>
+    <link href="{{ asset('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap') }}"
+        rel="stylesheet">
+
+    <!--Style-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Dospem</title>
+</head>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Dospem</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="/admin_subjects">Subjects</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="/userlist">User</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <div class="row" class="form">
+                            <form action="/newquestion" method="GET">
+                                Add <input name="qty" type="number">
+                                <button class="btn" type="submit">Question</button> 
+                            </form>
+                        </div>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a href="/questionlist" class="nav-link">Question List</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="/home">logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="container">
         <div class="row justify-content-center">
             <table class="table">
                 <thead>
                     <tr>
-                        <th>No</th>
-                        <th>NIM</th>
+                        <th>ID</th>
                         <th>Nama</th>
+                        {{-- <th>Program Studi</th> --}}
                         <th>Email</th>
-
-
                     </tr>
                 </thead>
                 <tbody>
-                    <td>1</td>
-                    <td>21537144042</td>
-                    <td>Raihan Baihaqi</td>
-                    <td>baihaqi@gmail.com</td>
+                    @foreach($name as $index=>$name)
+                        <tr>
+                            <td>{{ $id[$index]->id }}</td>
+                            <td>{{ $name->name }}</td>
+                            {{-- <td>{{ $majors[$index]->major }}</td> --}}
+                            <td>{{ $email[$index]->email }}</td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
-            <a href="/home" class="btn btn-primary w-25 mt-3">Kembali</a>
         </div>
     </div>
-</div>
+</body>
 
 
-
-@endsection

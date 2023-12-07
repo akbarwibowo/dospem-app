@@ -40,28 +40,8 @@
                     <li class="nav-item mx-2">
                         <a class="nav-link" href="/subjects">Subjects</a>
                     </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="/results">Results</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="/userlist">User</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="/newquestion">Add Question</a>
-                    </li>
-                    <li class="nav-item mx-2">
-                        <a class="nav-link" href="/question">Question</a>
-                    </li>
-                </ul>
-                <div class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Profil</a>
-                    <div class="dropdown-content">
-                        @php
-                            $user_id = Auth::user()->id;
-                        @endphp
-                        <a href="/profile/{{ $user_id }}">Edit Profil</a>
-
-                        <a class="dropdown-item" href="{{ route('logout') }}"
+                    <li>
+                        <a class="nav-link" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                                                 document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
@@ -69,10 +49,21 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
-                    </div>
+                    </li>
+                </ul>
+                {{-- <div class="dropdown"> --}}
+                    {{-- <a href="javascript:void(0)" class="dropbtn">Profil</a>
+                    <div class="dropdown-content">
+                        @php
+                            $user_id = Auth::user()->id;
+                        @endphp
+                        <a href="/profile/{{ $user_id }}">Edit Profil</a>
+
+                        
+                    </div> --}}
                     <!-- <button class="button-primary">Profil</button> -->
 
-                </div>
+                {{-- </div> --}}
             </div>
         </div>
     </nav>

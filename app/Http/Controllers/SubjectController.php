@@ -22,6 +22,17 @@ class SubjectController extends Controller
         
         return view('subjectsList', ['id'=>$id,'subjects' => $subjects, 'concentrations' => $concentrations]);
     }
+
+    public function adminSubjects() {
+        $id = Subject::select('id')->get();
+        $subjects = Subject::select('subject')->get();
+        $concentrations = DB::table('subjects')
+                        ->join('concentrations','subjects.concentration_id','=','concentrations.id')
+                        ->select('concentrations.concentration')
+                        ->get();
+        
+        return view('adminSubjectList', ['id'=>$id,'subjects' => $subjects, 'concentrations' => $concentrations]);
+    }
     public function getSuject() {
         $subject = Subject::all();        
     }

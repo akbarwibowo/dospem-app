@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\TwitterController;
@@ -46,6 +47,11 @@ Route::get('/userlist', function () {
 Auth::routes();
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::controller(AdminController::class)->group(function(){
+    route::get('/userlist', 'userList')->name('userList');
+});
+
 Route::controller(ProfileController::class)->group(function(){
     route::get('/profile/{id}', 'profile')->name('profile');
 });
@@ -55,13 +61,15 @@ Route::controller(ResultController::class)->group(function() {
 });
 
 Route::controller(QuestionController::class)->group(function() {
-    Route::get('/new', 'newQuestion')->name('newQuestion');
+    Route::get('/newquestion', 'newQuestion')->name('newQuestion');
     Route::post('/add', 'add')->name('add');
     Route::get('/form','getQuestions')->name('form');
+    Route::get('/questionlist', 'questionList')->name('questionList');
 });
 
 Route::controller(SubjectController::class)->group(function() {
     Route::get('/subjects', 'subjects')->name('subjects');
+    Route::get('/admin_subjects', 'adminSubjects')->name('adminSubjects');
 });
 
 Route::controller(LoginController::class)->group(function() {
@@ -71,6 +79,7 @@ Route::controller(LoginController::class)->group(function() {
     Route::post('/authenticate','authenticate')->name('authenticate');
     Route::get('/home', 'home')->name('home');
     Route::post('/logout', 'logout')->name('logout');
+    Route::post('/admin', 'admin')->name('admin');
 });
 
 Route::controller(VerificationController::class)->group(function() {

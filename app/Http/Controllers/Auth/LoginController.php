@@ -10,6 +10,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Events\Registered;
+use Laravel\Ui\Presets\React;
 
 class LoginController extends Controller
 {
@@ -97,6 +98,15 @@ class LoginController extends Controller
             'email' => 'Mohon maaf, kode credentials Anda tidak cocok dengan kode
             credentials Anda yang telah kami simpan.',
         ])->onlyInput('email');
+    }
+    public function admin(Request $request){
+        if($request->email == 'admin@gmail.com' && $request->password == 'zxcvbnm'){
+            return view('admin');
+        } else{
+            return back()->withErrors([
+                'email' => 'mohon maaf, email anda salah'
+            ])->onlyInput('email');
+        }
     }
 
     public function home()
