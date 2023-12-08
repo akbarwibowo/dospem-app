@@ -11,5 +11,7 @@ class Question extends Model
 
     protected $fillable = [
         'question',
+        'semester',
+        'concentration_id',
     ];
 }

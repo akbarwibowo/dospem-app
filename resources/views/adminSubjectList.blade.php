@@ -65,16 +65,18 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Pertanyaan</th>
+                        <th>Mata Kuliah</th>
+                        {{-- <th>Program Studi</th> --}}
                         <th>Konsentrasi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($questions as $index=>$question)
+                    @foreach($subjects as $index=>$subject)
                         <tr>
                             <td>{{ $id[$index]->id }}</td>
-                            <td>{{ $question->question }}</td>
-                            <td>{{ $type[$index]->concentration }}</td>
+                            <td>{{ $subject->subject }}</td>
+                            {{-- <td>{{ $majors[$index]->major }}</td> --}}
+                            <td>{{ $concentrations[$index]->concentration }}</td>
                         </tr>
                     @endforeach
                 </tbody>

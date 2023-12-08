@@ -44,7 +44,10 @@
       <div class="col-md-6 hero-tagline my-auto">
         <h3> Hello, welcome! </h3>
         <h1>Find subjects according to your passions.</h1>
-        <button class="button-lg-primary">Find subjects</button>
+        <form action="/login">
+            @csrf
+            <button class="button-lg-primary">Login</button>
+        </form>
       </div>
     </div>
   </div>

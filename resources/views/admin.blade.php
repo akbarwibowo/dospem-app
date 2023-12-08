@@ -59,28 +59,5 @@
             </div>
         </div>
     </nav>
-    <div class="container">
-        <div class="row justify-content-center">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Pertanyaan</th>
-                        <th>Konsentrasi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach($questions as $index=>$question)
-                        <tr>
-                            <td>{{ $id[$index]->id }}</td>
-                            <td>{{ $question->question }}</td>
-                            <td>{{ $type[$index]->concentration }}</td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
-    </div>
 </body>
-
 

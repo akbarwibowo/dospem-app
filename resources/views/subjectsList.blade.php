@@ -10,7 +10,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Mata Kuliah</th>
-                        <th>Program Studi</th>
+                        {{-- <th>Program Studi</th> --}}
                         <th>Konsentrasi</th>
                     </tr>
                 </thead>
@@ -19,7 +19,7 @@
                         <tr>
                             <td>{{ $id[$index]->id }}</td>
                             <td>{{ $subject->subject }}</td>
-                            <td>{{ $majors[$index]->major }}</td>
+                            {{-- <td>{{ $majors[$index]->major }}</td> --}}
                             <td>{{ $concentrations[$index]->concentration }}</td>
                         </tr>
                     @endforeach
